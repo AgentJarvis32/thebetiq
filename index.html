@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheBetIQ — Best Betting Sites Worldwide 2026</title>
+<meta name="description" content="The world's most trusted betting guide. Expert reviews of the best sportsbooks, online casinos, and poker sites for every country. US, UK, Canada, Australia, India and more.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.country-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
+.ctab { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:8px 16px; font-size:13px; font-weight:700; color:var(--muted); cursor:pointer; transition:all .15s; text-decoration:none; display:flex; align-items:center; gap:6px; }
+.ctab:hover, .ctab.active { background:var(--accent); color:#000; border-color:var(--accent); text-decoration:none; }
+.world-badge { background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(16,185,129,0.2)); border:1px solid rgba(245,158,11,0.3); border-radius:20px; padding:4px 12px; font-size:11px; font-weight:800; color:var(--accent); letter-spacing:.5px; }
+</style>
+</head>
+<body>
+
+<!-- DEV TOOLBAR — remove before going live -->
+<div id="dev-bar">
+  📋 <strong>All Pages:</strong>
+  <a href="index.html">Home</a> |
+  <a href="sportsbooks/index.html">Sportsbooks</a> |
+  <a href="sportsbooks/fanduel-review.html">FanDuel</a> |
+  <a href="sportsbooks/draftkings-review.html">DraftKings</a> |
+  <a href="sportsbooks/betonline-review.html">BetOnline</a> |
+  <a href="sportsbooks/bet365-review.html">Bet365</a> |
+  <a href="sportsbooks/williamhill-review.html">William Hill</a> |
+  <a href="sportsbooks/promo-codes.html">Promo Codes</a> |
+  <a href="casinos/index.html">Casinos</a> |
+  <a href="casinos/bovada-review.html">Bovada</a> |
+  <a href="poker/index.html">Poker</a> |
+  <a href="countries/index.html">Countries</a> |
+  <a href="countries/uk.html">🇬🇧 UK</a> |
+  <a href="countries/canada.html">🇨🇦 CA</a> |
+  <a href="countries/australia.html">🇦🇺 AU</a> |
+  <a href="countries/india.html">🇮🇳 India</a> |
+  <a href="countries/usa.html">🇺🇸 USA</a> |
+  <a href="countries/newzealand.html">🇳🇿 NZ</a> |
+  <a href="states/index.html">US States</a> |
+  <a href="states/michigan.html">Michigan</a> |
+  <a href="states/new-york.html">New York</a> |
+  <a href="states/california.html">California</a> |
+  <a href="states/texas.html">Texas</a> |
+  <a href="guides/index.html">Guides</a> |
+  <a href="guides/sports-betting-odds.html">Odds</a> |
+  <a href="guides/legal-guide.html">Legal</a> |
+  <a href="guides/blackjack-strategy.html">Blackjack</a> |
+  <a href="guides/bankroll-management.html">Bankroll</a> |
+  <a href="guides/parlay-guide.html">Parlays</a> |
+  <a href="guides/no-deposit-bonus.html">No Deposit</a>
+  &nbsp;|&nbsp; <strong>Simulate:</strong>
+  <a href="?country=GB">🇬🇧</a>
+  <a href="?country=AU">🇦🇺</a>
+  <a href="?country=IN">🇮🇳</a>
+  <a href="?country=CA">🇨🇦</a>
+  <a href="?country=US">🇺🇸</a>
+  <a href="?country=NZ">🇳🇿</a>
+  <a href="?country=DE">🇩🇪</a>
+  <a href="?" onclick="localStorage.removeItem('ba_country');localStorage.removeItem('ba_country_name')">🔄 Reset</a>
+</div>
+
+<!-- GEO BAR -->
+<div id="geo-bar"></div>
+
+<!-- COUNTRY PICKER MODAL -->
+<div id="country-modal" onclick="if(event.target===this)hideCountryPicker()">
+  <div class="modal-inner">
+    <div class="modal-title">
+      🌍 Select Your Country
+      <button class="modal-close" onclick="hideCountryPicker()">✕</button>
+    </div>
+    <div class="country-picker-grid">
+      <div class="cp-item" onclick="selectCountry('GB','United Kingdom')">🇬🇧 United Kingdom</div>
+      <div class="cp-item" onclick="selectCountry('AU','Australia')">🇦🇺 Australia</div>
+      <div class="cp-item" onclick="selectCountry('CA','Canada')">🇨🇦 Canada</div>
+      <div class="cp-item" onclick="selectCountry('IN','India')">🇮🇳 India</div>
+      <div class="cp-item" onclick="selectCountry('US','United States')">🇺🇸 United States</div>
+      <div class="cp-item" onclick="selectCountry('NZ','New Zealand')">🇳🇿 New Zealand</div>
+      <div class="cp-item" onclick="selectCountry('DE','Germany')">🇩🇪 Germany</div>
+      <div class="cp-item" onclick="selectCountry('IE','Ireland')">🇮🇪 Ireland</div>
+      <div class="cp-item" onclick="selectCountry('ZA','South Africa')">🇿🇦 South Africa</div>
+      <div class="cp-item" onclick="selectCountry('SE','Sweden')">🇸🇪 Sweden</div>
+      <div class="cp-item" onclick="selectCountry('NO','Norway')">🇳🇴 Norway</div>
+      <div class="cp-item" onclick="selectCountry('BR','Brazil')">🇧🇷 Brazil</div>
+      <div class="cp-item" onclick="selectCountry('MX','Mexico')">🇲🇽 Mexico</div>
+      <div class="cp-item" onclick="selectCountry('JP','Japan')">🇯🇵 Japan</div>
+      <div class="cp-item" onclick="selectCountry('SG','Singapore')">🇸🇬 Singapore</div>
+      <div class="cp-item" onclick="selectCountry('PH','Philippines')">🇵🇭 Philippines</div>
+      <div class="cp-item" onclick="selectCountry('KE','Kenya')">🇰🇪 Kenya</div>
+      <div class="cp-item" onclick="selectCountry('NG','Nigeria')">🇳🇬 Nigeria</div>
+      <div class="cp-item" onclick="selectCountry('GH','Ghana')">🇬🇭 Ghana</div>
+      <div class="cp-item" onclick="selectCountry('HK','Hong Kong')">🇭🇰 Hong Kong</div>
+    </div>
+    <p style="font-size:11px;color:var(--muted);margin-top:16px">Your selection is saved locally. We use it to show the most relevant operators and bonuses for your region.</p>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">The<span>BetIQ</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sportsbooks/index.html">Sportsbooks</a></li>
+      <li><a href="casinos/index.html">Casinos</a></li>
+      <li><a href="poker/index.html">Poker</a></li>
+      <li><a href="countries/index.html">Countries</a></li>
+      <li><a href="states/index.html">US States</a></li>
+      <li><a href="guides/index.html">Guides</a></li>
+      <li><a href="sportsbooks/promo-codes.html">Bonuses <span class="nav-badge">HOT</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="world-badge">🌍 WORLDWIDE COVERAGE</div>
+  <h1 style="margin-top:14px">The World's Most Trusted<br><span>Betting Site Reviews</span></h1>
+  <p>Expert reviews of every major sportsbook, casino, and poker site — for every country. We find the best odds, biggest bonuses, and fastest payouts wherever you are.</p>
+  <div class="hero-badges">
+    <div class="hero-badge"><span class="dot"></span>100+ Countries Covered</div>
+    <div class="hero-badge"><span class="dot"></span>Updated March 2026</div>
+    <div class="hero-badge"><span class="dot"></span>Real Money Tested</div>
+    <div class="hero-badge"><span class="dot"></span>Independent Reviews</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="legal-notice">
+    <strong>Affiliate Disclosure:</strong> We may earn a commission if you sign up through our links at no extra cost to you. All reviews are editorially independent. Must be of legal gambling age in your jurisdiction. Please gamble responsibly.
+  </div>
+
+  <div class="layout">
+    <div class="main">
+
+      <!-- GLOBAL TOP SPORTSBOOKS -->
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">🌍 Best Betting Sites Worldwide 2026</h2>
+          <a href="sportsbooks/index.html" class="see-all">See all →</a>
+        </div>
+
+        <div class="country-tabs">
+          <a href="#global" class="ctab active" data-geo="global">🌍 Global</a>
+          <a href="countries/uk.html" class="ctab" data-geo="uk">🇬🇧 United Kingdom</a>
+          <a href="countries/canada.html" class="ctab" data-geo="ca">🇨🇦 Canada</a>
+          <a href="countries/australia.html" class="ctab" data-geo="au">🇦🇺 Australia</a>
+          <a href="countries/india.html" class="ctab" data-geo="in">🇮🇳 India</a>
+          <a href="countries/usa.html" class="ctab" data-geo="us">🇺🇸 USA</a>
+          <a href="countries/index.html" class="ctab" data-geo="more">More →</a>
+        </div>
+
+        <div id="global" class="operator-list">
+
+          <div class="operator-card">
+            <div class="op-rank rank-1">#1</div>
+            <div>
+              <div class="op-name">Bet365 <span style="font-size:11px;color:#64748b;font-weight:400">— Global #1</span></div>
+              <div class="op-meta">40+ countries · 35+ million customers · Industry standard</div>
+              <div class="op-bonus">Up to $200 in Bet Credits for New Customers</div>
+              <div class="op-tags">
+                <span class="op-tag">🌍 Global</span>
+                <span class="op-tag">In-Play King</span>
+                <span class="op-tag">Best Streaming</span>
+                <span class="op-tag">Cash Out</span>
+                <span class="op-tag">35M+ Users</span>
+              </div>
+              <a href="sportsbooks/bet365-review.html" class="cta-btn" style="max-width:150px;margin-top:10px">Full Review →</a>
+            </div>
+            <div class="op-rating"><span class="score">9.7</span><div class="stars">★★★★★</div><div class="label">Expert Score</div></div>
+          </div>
+
+          <div class="operator-card">
+            <div class="op-rank rank-2">#2</div>
+            <div>
+              <div class="op-name">William Hill <span style="font-size:11px;color:#64748b;font-weight:400">— Founded 1934</span></div>
+              <div class="op-meta">UK, Europe, Australia, Canada · 90 years operating</div>
+              <div class="op-bonus">Bet £10, Get £30 in Free Bets</div>
+              <div class="op-tags">
+                <span class="op-tag">🇬🇧 UK Leader</span>
+                <span class="op-tag">Horse Racing</span>
+                <span class="op-tag">90yr Heritage</span>
+                <span class="op-tag">Best Prices</span>
+              </div>
+              <a href="sportsbooks/williamhill-review.html" class="cta-btn" style="max-width:150px;margin-top:10px">Full Review →</a>
+            </div>
+            <div class="op-rating"><span class="score">9.3</span><div class="stars">★★★★★</div><div class="label">Expert Score</div></div>
+          </div>
+
+          <div class="operator-card">
+            <div class="op-rank rank-3">#3</div>
+            <div>
+              <div class="op-name">Betway</div>
+              <div class="op-meta">30+ countries · Strong in Europe, Africa, India</div>
+              <div class="op-bonus">Up to £30 in Free Bets for New Customers</div>
+              <div class="op-tags">
+                <span class="op-tag">🌍 Global</span>
+                <span class="op-tag">Esports</span>
+                <span class="op-tag">Cricket</span>
+                <span class="op-tag">Casino</span>
+              </div>
+              <a href="sportsbooks/betway-review.html" class="cta-btn" style="max-width:150px;margin-top:10px">Full Review →</a>
+            </div>
+            <div class="op-rating"><span class="score">9.1</span><div class="stars">★★★★★</div><div class="label">Expert Score</div></div>
+          </div>
+
+          <div class="operator-card">
+            <div class="op-rank" style="color:#475569">#4</div>
+            <div>
+              <div class="op-name">1xBet</div>
+              <div class="op-meta">100+ countries · Widest market coverage on earth</div>
+              <div class="op-bonus">100% Welcome Bonus up to €100</div>
+              <div class="op-tags">
+                <span class="op-tag">🌍 100+ Countries</span>
+                <span class="op-tag">Most Markets</span>
+                <span class="op-tag">Crypto</span>
+                <span class="op-tag">Esports</span>
+              </div>
+            </div>
+            <div class="op-rating"><span class="score">8.8</span><div class="stars">★★★★☆</div><div class="label">Expert Score</div></div>
+          </div>
+
+          <div class="operator-card">
+            <div class="op-rank" style="color:#475569">#5</div>
+            <div>
+              <div class="op-name">Betfair</div>
+              <div class="op-meta">UK, Europe, Australia · World's largest betting exchange</div>
+              <div class="op-bonus">Up to £100 in Exchange Free Bets</div>
+              <div class="op-tags">
+                <span class="op-tag">Betting Exchange</span>
+                <span class="op-tag">Back & Lay</span>
+                <span class="op-tag">Best Odds</span>
+                <span class="op-tag">Trading</span>
+              </div>
+            </div>
+            <div class="op-rating"><span class="score">9.0</span><div class="stars">★★★★★</div><div class="label">Expert Score</div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BY COUNTRY -->
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">🗺️ Best Betting Sites by Country</h2>
+          <a href="countries/index.html" class="see-all">All countries →</a>
+        </div>
+        <div class="guide-grid">
+          <a href="countries/uk.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card">
+              <div class="guide-icon">🇬🇧</div>
+              <div class="guide-title">United Kingdom</div>
+              <div class="guide-desc">FCA-regulated market. Best odds, horse racing, Premier League. 50+ licensed operators.</div>
+              <span class="guide-link">UK betting sites →</span>
+            </div>
+          </a>
+          <a href="countries/canada.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card">
+              <div class="guide-icon">🇨🇦</div>
+              <div class="guide-title">Canada</div>
+              <div class="guide-desc">Single-game betting legal since 2021. Ontario has licensed operators. Other provinces use offshore.</div>
+              <span class="guide-link">Canada betting sites →</span>
+            </div>
+          </a>
+          <a href="countries/australia.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card">
+              <div class="guide-icon">🇦🇺</div>
+              <div class="guide-title">Australia</div>
+              <div class="guide-desc">Sports betting legal nationwide. TAB, Sportsbet, Ladbrokes dominate. No online casino (yet).</div>
+              <span class="guide-link">Australia betting sites →</span>
+            </div>
+          </a>
+          <a href="countries/india.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card">
+              <div class="guide-icon">🇮🇳</div>
+              <div class="guide-title">India</div>
+              <div class="guide-desc">Cricket betting is massive. Legal gray area — offshore sites widely used. Huge growth market.</div>
+              <span class="guide-link">India betting sites →</span>
+            </div>
+          </a>
+          <a href="countries/usa.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card">
+              <div class="guide-icon">🇺🇸</div>
+              <div class="guide-title">United States</div>
+              <div class="guide-desc">State-by-state legal market. FanDuel, DraftKings, Caesars licensed. Offshore for all 50 states.</div>
+              <span class="guide-link">US betting sites →</span>
+            </div>
+          </a>
+          <a href="countries/newzealand.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card">
+              <div class="guide-icon">🇳🇿</div>
+              <div class="guide-title">New Zealand</div>
+              <div class="guide-desc">TAB NZ is the monopoly. International operators accessible. Rugby betting is king.</div>
+              <span class="guide-link">NZ betting sites →</span>
+            </div>
+          </a>
+          <a href="countries/germany.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card">
+              <div class="guide-icon">🇩🇪</div>
+              <div class="guide-title">Germany</div>
+              <div class="guide-desc">New GlüNeuRStV licensing from 2021. Bet3000, Tipico, and international operators licensed.</div>
+              <span class="guide-link">Germany betting sites →</span>
+            </div>
+          </a>
+          <a href="countries/index.html" style="text-decoration:none;color:inherit">
+            <div class="guide-card" style="border-style:dashed;display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center">
+                <div style="font-size:28px;margin-bottom:8px">🌍</div>
+                <div class="guide-title">All Countries</div>
+                <span class="guide-link">View full directory →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- US SECTION -->
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">🇺🇸 Best US Sportsbooks 2026</h2>
+          <a href="states/index.html" class="see-all">All 50 states →</a>
+        </div>
+        <div class="operator-list">
+          <div class="operator-card">
+            <div class="op-rank rank-1">#1</div>
+            <div>
+              <div class="op-name">FanDuel Sportsbook</div>
+              <div class="op-meta">20+ states · Licensed · Best odds in most markets</div>
+              <div class="op-bonus">Bet $5, Get $150 in Bonus Bets</div>
+              <div class="op-tags"><span class="op-tag">Best Odds</span><span class="op-tag">Live Betting</span><span class="op-tag">Top App</span></div>
+              <a href="sportsbooks/fanduel-review.html" class="cta-btn" style="max-width:140px;margin-top:10px">Review →</a>
+            </div>
+            <div class="op-rating"><span class="score">9.4</span><div class="stars">★★★★★</div><div class="label">Expert Score</div></div>
+          </div>
+          <div class="operator-card">
+            <div class="op-rank rank-2">#2</div>
+            <div>
+              <div class="op-name">DraftKings Sportsbook</div>
+              <div class="op-meta">23+ states · Licensed · Best app experience</div>
+              <div class="op-bonus">Bet $5, Get $200 in Bonus Bets</div>
+              <div class="op-tags"><span class="op-tag">Best App</span><span class="op-tag">SGP Builder</span></div>
+              <a href="sportsbooks/draftkings-review.html" class="cta-btn" style="max-width:140px;margin-top:10px">Review →</a>
+            </div>
+            <div class="op-rating"><span class="score">9.2</span><div class="stars">★★★★★</div><div class="label">Expert Score</div></div>
+          </div>
+          <div class="operator-card">
+            <div class="op-rank rank-3">#3</div>
+            <div>
+              <div class="op-name">BetOnline <span style="font-size:11px;color:#64748b;font-weight:400">(All 50 States)</span></div>
+              <div class="op-meta">Offshore · 25 Years · Highest Limits · No Account Limiting</div>
+              <div class="op-bonus">50% up to $1,000 — Code: BOL1000</div>
+              <div class="op-tags"><span class="op-tag">All 50 States</span><span class="op-tag">$50k Max Bet</span><span class="op-tag">25yr Record</span></div>
+              <a href="sportsbooks/betonline-review.html" class="cta-btn" style="max-width:140px;margin-top:10px">Review →</a>
+            </div>
+            <div class="op-rating"><span class="score">9.1</span><div class="stars">★★★★★</div><div class="label">Expert Score</div></div>
+          </div>
+        </div>
+        <div style="margin-top:16px;text-align:right"><a href="states/index.html" style="font-size:13px;color:var(--muted)">Find your state →</a></div>
+      </div>
+
+      <!-- GUIDES -->
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">📚 Betting Guides</h2>
+          <a href="guides/index.html" class="see-all">All guides →</a>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-card">
+            <div class="guide-icon">📊</div>
+            <div class="guide-title">Sports Betting Odds Explained</div>
+            <div class="guide-desc">American, decimal, and fractional odds. Implied probability. Everything to read a betting line.</div>
+            <a href="guides/sports-betting-odds.html" class="guide-link">Read guide →</a>
+          </div>
+          <div class="guide-card">
+            <div class="guide-icon">⚖️</div>
+            <div class="guide-title">Is Online Gambling Legal?</div>
+            <div class="guide-desc">Country-by-country legal status. What offshore means. Federal vs. state/provincial law.</div>
+            <a href="guides/legal-guide.html" class="guide-link">Read guide →</a>
+          </div>
+          <div class="guide-card">
+            <div class="guide-icon">🃏</div>
+            <div class="guide-title">Blackjack Basic Strategy</div>
+            <div class="guide-desc">The complete strategy chart. Reduces house edge to under 0.5%.</div>
+            <a href="guides/blackjack-strategy.html" class="guide-link">Read guide →</a>
+          </div>
+          <div class="guide-card">
+            <div class="guide-icon">💵</div>
+            <div class="guide-title">Bankroll Management</div>
+            <div class="guide-desc">Unit sizing, session limits, Kelly Criterion. The most important skill in gambling.</div>
+            <a href="guides/bankroll-management.html" class="guide-link">Read guide →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="bonus-alert">
+        <div class="ba-title">🔥 TOP OFFER RIGHT NOW</div>
+        <div class="ba-book">DraftKings (USA)</div>
+        <div class="ba-offer">Bet $5 → Get $200 in Bonus Bets</div>
+        <a href="sportsbooks/draftkings-review.html" class="cta-btn">Claim →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">🌍 By Country</div>
+        <ul class="sidebar-links">
+          <li><a href="countries/uk.html"><span class="icon">🇬🇧</span>United Kingdom</a></li>
+          <li><a href="countries/canada.html"><span class="icon">🇨🇦</span>Canada</a></li>
+          <li><a href="countries/australia.html"><span class="icon">🇦🇺</span>Australia</a></li>
+          <li><a href="countries/india.html"><span class="icon">🇮🇳</span>India</a></li>
+          <li><a href="countries/usa.html"><span class="icon">🇺🇸</span>United States</a></li>
+          <li><a href="countries/index.html"><span class="icon">🌍</span>All Countries →</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Top Reviews</div>
+        <ul class="sidebar-links">
+          <li><a href="sportsbooks/bet365-review.html"><span class="icon">⭐</span>Bet365 — 9.7/10</a></li>
+          <li><a href="sportsbooks/williamhill-review.html"><span class="icon">⭐</span>William Hill — 9.3/10</a></li>
+          <li><a href="sportsbooks/fanduel-review.html"><span class="icon">⭐</span>FanDuel — 9.4/10</a></li>
+          <li><a href="sportsbooks/draftkings-review.html"><span class="icon">⭐</span>DraftKings — 9.2/10</a></li>
+          <li><a href="sportsbooks/betonline-review.html"><span class="icon">⭐</span>BetOnline — 9.1/10</a></li>
+          <li><a href="casinos/bovada-review.html"><span class="icon">⭐</span>Bovada — 8.8/10</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">🇺🇸 US States</div>
+        <ul class="sidebar-links">
+          <li><a href="states/michigan.html"><span class="icon">📍</span>Michigan</a></li>
+          <li><a href="states/new-york.html"><span class="icon">📍</span>New York</a></li>
+          <li><a href="states/california.html"><span class="icon">📍</span>California</a></li>
+          <li><a href="states/texas.html"><span class="icon">📍</span>Texas</a></li>
+          <li><a href="states/index.html"><span class="icon">📍</span>All 50 States →</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card" style="background:rgba(239,68,68,0.05);border-color:rgba(239,68,68,0.2)">
+        <div class="sidebar-title" style="color:#ef4444">Responsible Gambling</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6">Gambling should be entertainment. Help is available 24/7 worldwide.</p>
+        <p style="font-size:12px;font-weight:700;color:var(--text);margin-top:8px">🇺🇸 1-800-GAMBLER<br>🇬🇧 GamCare: 0808 8020 133<br>🇦🇺 Gambling Help: 1800 858 858</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">TheBetIQ</div>
+        <div class="footer-desc">The world's most trusted independent guide to online gambling. We review every major sportsbook, casino, and poker site across 100+ countries. Licensed and offshore options covered for every market.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Top Sites</h4>
+        <ul>
+          <li><a href="sportsbooks/bet365-review.html">Bet365 Review</a></li>
+          <li><a href="sportsbooks/williamhill-review.html">William Hill Review</a></li>
+          <li><a href="sportsbooks/fanduel-review.html">FanDuel Review</a></li>
+          <li><a href="sportsbooks/draftkings-review.html">DraftKings Review</a></li>
+          <li><a href="sportsbooks/betonline-review.html">BetOnline Review</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Countries</h4>
+        <ul>
+          <li><a href="countries/uk.html">United Kingdom</a></li>
+          <li><a href="countries/canada.html">Canada</a></li>
+          <li><a href="countries/australia.html">Australia</a></li>
+          <li><a href="countries/india.html">India</a></li>
+          <li><a href="countries/index.html">All Countries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="guides/sports-betting-odds.html">Odds Explained</a></li>
+          <li><a href="guides/legal-guide.html">Legal Guide</a></li>
+          <li><a href="guides/blackjack-strategy.html">Blackjack Strategy</a></li>
+          <li><a href="guides/bankroll-management.html">Bankroll Management</a></li>
+          <li><a href="sportsbooks/promo-codes.html">Promo Codes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 TheBetIQ. All rights reserved. This site contains affiliate links. We may receive compensation when you sign up with our partners — this does not influence our editorial content. | Gambling is legal in many countries but may not be legal in yours. Check your local laws before wagering. | Please gamble responsibly. If gambling is causing harm, seek help: UK: GamCare 0808 8020 133 | US: 1-800-GAMBLER | AU: 1800 858 858 | CA: 1-866-531-2600</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/geo.js"></script>
+</body>
+</html>
