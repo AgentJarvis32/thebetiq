@@ -3,124 +3,158 @@
 <head>
 <script>
 (function(){
-  if(localStorage.getItem('betiq-lang'))return;
-  var m={'es':'/es/','ca':'/es/','pt':'/pt/','fr':'/fr/','de':'/de/',
-    'at':'/de/','it':'/it/','ja':'/ja/','ko':'/ko/','zh':'/zh/','hi':'/hi/','tr':'/tr/'};
+  var m={'es':'/es/','ca':'/es/','pt':'/pt/','fr':'/fr/','be':'/fr/',
+    'de':'/de/','at':'/de/','it':'/it/','ja':'/ja/','ko':'/ko/',
+    'zh':'/zh/','hi':'/hi/','tr':'/tr/'};
+  if(localStorage.getItem('betiq-lang-chosen'))return;
   var l=(navigator.language||'').toLowerCase();
   var t=m[l]||m[l.split('-')[0]];
   if(t&&!window.location.pathname.startsWith(t)){
-    localStorage.setItem('betiq-lang','1');window.location.href=t;
+    localStorage.setItem('betiq-lang-chosen','1');window.location.href=t;
   }
 })();
 </script>
-
-
-
-<!-- Google tag (gtag.js) -->
-
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TheBetIQ -- I Migliori Casinò Online & Recensioni di Casinò Crypto 2026</title>
-<meta name="description" content="Recensioni esperte dei migliori casinò online e casinò crypto in tutto il mondo. Testiamo i giochi, verifichiamo i pagamenti e troviamo i bonus più grandi. BitStarz, Bovada, DraftKings Casino, BetMGM e altro ancora.">
+<meta name="description" content="Recensioni esperte dei migliori casinò online e casinò crypto in tutto il mondo. Testiamo i giochi, verifichiamo i pagamenti e troviamo i bonus più grandi. BitStarz, Bovada, DraftKings Casino, BetMGM e altri.">
 <meta property="og:title" content="TheBetIQ -- I Migliori Casinò Online & Recensioni di Casinò Crypto 2026">
-<meta property="og:description" content="Casinò online e casinò crypto di alta qualità recensiti per oltre 100 paesi. Giochi testati, pagamenti verificati, recensioni indipendenti di esperti.">
+<meta property="og:description" content="Casinò online e casinò crypto con le migliori valutazioni recensiti per oltre 100 paesi. Giochi testati, pagamenti verificati, recensioni di esperti indipendenti.">
 <meta property="og:url" content="https://thebetiq.com/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://thebetiq.com/">
 <link rel="stylesheet" href="css/style.css">
-
-  <link rel="alternate" hreflang="en" href="https://thebetiq.com/index.html" />
-  <link rel="alternate" hreflang="x-default" href="https://thebetiq.com/index.html" />
-  <link rel="alternate" hreflang="es" href="https://thebetiq.com/es/index.html" />
-  <link rel="alternate" hreflang="pt" href="https://thebetiq.com/pt/index.html" />
-  <link rel="alternate" hreflang="fr" href="https://thebetiq.com/fr/index.html" />
-  <link rel="alternate" hreflang="de" href="https://thebetiq.com/de/index.html" />
-  <link rel="alternate" hreflang="it" href="https://thebetiq.com/it/index.html" />
-  <link rel="alternate" hreflang="ja" href="https://thebetiq.com/ja/index.html" />
-  <link rel="alternate" hreflang="ko" href="https://thebetiq.com/ko/index.html" />
-  <link rel="alternate" hreflang="zh" href="https://thebetiq.com/zh/index.html" />
-  <link rel="alternate" hreflang="hi" href="https://thebetiq.com/hi/index.html" />
-  <link rel="alternate" hreflang="tr" href="https://thebetiq.com/tr/index.html" />
+ <link rel="alternate" hreflang="en" href="https://thebetiq.com/index.html" />
+ <link rel="alternate" hreflang="x-default" href="https://thebetiq.com/index.html" />
+ <link rel="alternate" hreflang="es" href="https://thebetiq.com/es/index.html" />
+ <link rel="alternate" hreflang="pt" href="https://thebetiq.com/pt/index.html" />
+ <link rel="alternate" hreflang="fr" href="https://thebetiq.com/fr/index.html" />
+ <link rel="alternate" hreflang="de" href="https://thebetiq.com/de/index.html" />
+ <link rel="alternate" hreflang="it" href="https://thebetiq.com/it/index.html" />
+ <link rel="alternate" hreflang="ja" href="https://thebetiq.com/ja/index.html" />
+ <link rel="alternate" hreflang="ko" href="https://thebetiq.com/ko/index.html" />
+ <link rel="alternate" hreflang="zh" href="https://thebetiq.com/zh/index.html" />
+ <link rel="alternate" hreflang="hi" href="https://thebetiq.com/hi/index.html" />
+ <link rel="alternate" hreflang="tr" href="https://thebetiq.com/tr/index.html" />
 </head>
 <body>
-
-
-<!-- GEO BAR -->
 <div id="geo-bar"></div>
-
-<!-- COUNTRY PICKER MODAL -->
 <div id="country-modal" onclick="if(event.target===this)hideCountryPicker()">
-  <div class="modal-inner">
-    <div class="modal-title">
-      🌍 Seleziona il Tuo Paese
-      <button class="modal-close" onclick="hideCountryPicker()">✕</button>
-    </div>
-    <div class="country-picker-grid">
-      <div class="cp-item" onclick="selectCountry('GB','Regno Unito')">🇬🇧 Regno Unito</div>
-      <div class="cp-item" onclick="selectCountry('AU','Australia')">🇦🇺 Australia</div>
-      <div class="cp-item" onclick="selectCountry('CA','Canada')">🇨🇦 Canada</div>
-      <div class="cp-item" onclick="selectCountry('IN','India')">🇮🇳 India</div>
-      <div class="cp-item" onclick="selectCountry('US','Stati Uniti')">🇺🇸 Stati Uniti</div>
-      <div class="cp-item" onclick="selectCountry('NZ','Nuova Zelanda')">🇳🇿 Nuova Zelanda</div>
-      <div class="cp-item" onclick="selectCountry('DE','Germania')">🇩🇪 Germania</div>
-      <div class="cp-item" onclick="selectCountry('IE','Irlanda')">🇮🇪 Irlanda</div>
-      <div class="cp-item" onclick="selectCountry('ZA','Sudafrica')">🇿🇦 Sudafrica</div>
-      <div class="cp-item" onclick="selectCountry('SE','Svezia')">🇸🇪 Svezia</div>
-      <div class="cp-item" onclick="selectCountry('NO','Norvegia')">🇳🇴 Norvegia</div>
-      <div class="cp-item" onclick="selectCountry('BR','Brasile')">🇧🇷 Brasile</div>
-      <div class="cp-item" onclick="selectCountry('MX','Messico')">🇲🇽 Messico</div>
-      <div class="cp-item" onclick="selectCountry('JP','Giappone')">🇯🇵 Giappone</div>
-      <div class="cp-item" onclick="selectCountry('SG','Singapore')">🇸🇬 Singapore</div>
-      <div class="cp-item" onclick="selectCountry('PH','Filippine')">🇵🇭 Filippine</div>
-      <div class="cp-item" onclick="selectCountry('KE','Kenya')">🇰🇪 Kenya</div>
-      <div class="cp-item" onclick="selectCountry('NG','Nigeria')">🇳🇬 Nigeria</div>
-      <div class="cp-item" onclick="selectCountry('GH','Ghana')">🇬🇭 Ghana</div>
-      <div class="cp-item" onclick="selectCountry('HK','Hong Kong')">🇭🇰 Hong Kong</div>
-    </div>
-    <p style="font-size:11px;color:var(--muted);margin-top:16px">La tua selezione è salvata localmente. La utilizziamo per mostrarti gli operatori e i bonus più rilevanti per la tua regione.</p>
-  </div>
+ <div class="modal-inner">
+ <div class="modal-title">
+ 🌍 Seleziona il tuo Paese
+ <button class="modal-close" onclick="hideCountryPicker()">✕</button>
+ </div>
+ <div class="country-picker-grid">
+ <div class="cp-item" onclick="selectCountry('GB','Regno Unito')">🇬🇧 Regno Unito</div>
+ <div class="cp-item" onclick="selectCountry('AU','Australia')">🇦🇺 Australia</div>
+ <div class="cp-item" onclick="selectCountry('CA','Canada')">🇨🇦 Canada</div>
+ <div class="cp-item" onclick="selectCountry('IN','India')">🇮🇳 India</div>
+ <div class="cp-item" onclick="selectCountry('US','Stati Uniti')">🇺🇸 Stati Uniti</div>
+ <div class="cp-item" onclick="selectCountry('NZ','Nuova Zelanda')">🇳🇿 Nuova Zelanda</div>
+ <div class="cp-item" onclick="selectCountry('DE','Germania')">🇩🇪 Germania</div>
+ <div class="cp-item" onclick="selectCountry('IE','Irlanda')">🇮🇪 Irlanda</div>
+ <div class="cp-item" onclick="selectCountry('ZA','Sudafrica')">🇿🇦 Sudafrica</div>
+ <div class="cp-item" onclick="selectCountry('SE','Svezia')">🇸🇪 Svezia</div>
+ <div class="cp-item" onclick="selectCountry('NO','Norvegia')">🇳🇴 Norvegia</div>
+ <div class="cp-item" onclick="selectCountry('BR','Brasile')">🇧🇷 Brasile</div>
+ <div class="cp-item" onclick="selectCountry('MX','Messico')">🇲🇽 Messico</div>
+ <div class="cp-item" onclick="selectCountry('JP','Giappone')">🇯🇵 Giappone</div>
+ <div class="cp-item" onclick="selectCountry('SG','Singapore')">🇸🇬 Singapore</div>
+ <div class="cp-item" onclick="selectCountry('PH','Filippine')">🇵🇭 Filippine</div>
+ <div class="cp-item" onclick="selectCountry('KE','Kenya')">🇰🇪 Kenya</div>
+ <div class="cp-item" onclick="selectCountry('NG','Nigeria')">🇳🇬 Nigeria</div>
+ <div class="cp-item" onclick="selectCountry('GH','Ghana')">🇬🇭 Ghana</div>
+ <div class="cp-item" onclick="selectCountry('HK','Hong Kong')">🇭🇰 Hong Kong</div>
+ </div>
+ <p style="font-size:11px;color:var(--muted);margin-top:16px">La tua selezione è salvata localmente. La utilizziamo per mostrarti i migliori operatori e bonus più rilevanti per la tua regione.</p>
+ </div>
 </div>
-
 <nav>
-  <div class="nav-inner">
-    <div class="nav-logo">The<span>BetIQ</span></div>
-    <ul class="nav-links">
-      <li><a href="/it/index.html">Home</a></li>
-      <li><a href="/it/casinos/index.html">Casinò Online</a></li>
-      <li><a href="/it/casinos/crypto-casinos.html">Casinò Crypto</a></li>
-      <li><a href="/it/countries/index.html">Paesi</a></li>
-      <li><a href="/it/states/index.html">Stati USA</a></li>
-      <li><a href="/it/guides/index.html">Guide</a></li>
-      <li><a href="/it/blog/">Blog</a></li>
-      <li><a href="/it/bonus-codes.html">Codici Bonus <span class="nav-badge">NUOVO</span></a></li>
-    </ul>
-  </div>
+ <div class="nav-inner">
+ <div class="nav-logo">The<span>BetIQ</span></div>
+ <ul class="nav-links">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="/it/casinos/index.html">Casinò Online</a></li>
+ <li><a href="/it/casinos/crypto-casinos.html">Casinò Crypto</a></li>
+ <li><a href="/it/countries/index.html">Paesi</a></li>
+ <li><a href="/it/states/index.html">Stati USA</a></li>
+ <li><a href="/it/guides/index.html">Guide</a></li>
+ <li><a href="/it/blog/">Blog</a></li>
+ <li><a href="/it/bonus-codes.html">Codici Bonus <span class="nav-badge">NUOVO</span></a></li>
+ </ul>
+ </div>
 </nav>
-
 <div class="hero">
-  <div class="world-badge">🌍 COPERTURA MONDIALE</div>
-  <h1 style="margin-top:14px">Le Recensioni di Casinò Online<br><span>Più Affidabili al Mondo</span></h1>
-  <p>Recensioni esperte dei migliori casinò online e casinò crypto in tutto il mondo. Testiamo i giochi, verifichiamo i pagamenti e troviamo i bonus più grandi così non devi farlo tu.</p>
-  <div class="hero-badges">
-    <div class="hero-badge"><span class="dot"></span>3.500+ Giochi Testati</div>
-    <div class="hero-badge"><span class="dot"></span>Velocità di Pagamento Verificata</div>
-    <div class="hero-badge"><span class="dot"></span>Crypto & Fiat</div>
-    <div class="hero-badge"><span class="dot"></span>Recensioni Indipendenti</div>
-  </div>
+ <div class="world-badge">🌍 COPERTURA MONDIALE</div>
+ <h1 style="margin-top:14px">Le Recensioni di Casinò Online<br><span>Più Affidabili al Mondo</span></h1>
+ <p>Recensioni esperte dei migliori casinò online e casinò crypto in tutto il mondo. Testiamo i giochi, verifichiamo i pagamenti e troviamo i bonus più grandi così non devi farlo tu.</p>
+ <div class="hero-badges">
+ <div class="hero-badge"><span class="dot"></span>3.500+ Giochi Testati</div>
+ <div class="hero-badge"><span class="dot"></span>Velocità di Pagamento Verificata</div>
+ <div class="hero-badge"><span class="dot"></span>Crypto & Fiat</div>
+ <div class="hero-badge"><span class="dot"></span>Recensioni Indipendenti</div>
+ </div>
 </div>
-
-<!-- BONUS CODES BANNER -->
 <div style="background:linear-gradient(135deg,#1a1020 0%,#0f1117 50%,#0d1a0d 100%);border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);padding:40px 20px;text-align:center">
-  <div style="max-width:var(--max-width);margin:0 auto">
-    <div style="font-size:11px;font-weight:800;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">🔥 CODICI BONUS ESCLUSIVI — AGGIORNATI APRILE 2026</div>
-    <h2 style="font-size:32px;font-weight:900;color:var(--text);margin:0 0 8px 0">I Migliori Codici Bonus Casinò di Oggi</h2>
-    <p style="color:var(--muted);margin:0 0 28px 0;font-size:15px">Codici verificati. Clicca per copiare. Usa al momento della registrazione per ottenere il massimo valore.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:900px;margin:0 auto">
-
-      <!-- BitStarz -->
-      <div style="background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:20px;text-align:left;position:relative;overflow:hidden">
-        <div style="position:absolute;top:0;right:0;background:var(--accent);color:#000;font-size:10px;font-weight:800;padding:4px 12px;border-radius:0 0 0 8px">MIGLIORE OFFERTA</div>
-        <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">🎰 BitStarz</div>
-        <div style="font-size:14px;color:var(--accent);font-weight:700;margin-bottom:12px">5 BTC + 180 Giri Gratuiti</div>
-        <div style="
+ <div style="max-width:var(--max-width);margin:0 auto">
+ <div style="font-size:11px;font-weight:800;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">🔥 CODICI BONUS ESCLUSIVI — AGGIORNATI APRILE 2026</div>
+ <h2 style="font-size:32px;font-weight:900;color:var(--text);margin:0 0 8px 0">I Migliori Codici Bonus Casinò di Oggi</h2>
+ <p style="color:var(--muted);margin:0 0 28px 0;font-size:15px">Codici verificati. Clicca per copiare. Usali al momento della registrazione per il massimo valore.</p>
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:900px;margin:0 auto">
+ <div style="background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:20px;text-align:left;position:relative;overflow:hidden">
+ <div style="position:absolute;top:0;right:0;background:var(--accent);color:#000;font-size:10px;font-weight:800;padding:4px 12px;border-radius:0 0 0 8px">MIGLIORE OFFERTA</div>
+ <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">🎰 BitStarz</div>
+ <div style="font-size:14px;color:var(--accent);font-weight:700;margin-bottom:12px">5 BTC + 180 Giri Gratuiti</div>
+ <div style="display:flex;gap:8px;align-items:center">
+ <div onclick="navigator.clipboard.writeText('Nessun codice necessario');this.textContent='✅ Copiato!';setTimeout(()=>this.textContent='NESSUN CODICE NECESSARIO — APPLICATO AUTOMATICAMENTE',2000)" style="flex:1;background:rgba(245,158,11,0.1);border:1px dashed var(--accent);border-radius:6px;padding:10px 14px;font-family:monospace;font-size:14px;font-weight:700;color:var(--accent);cursor:pointer;text-align:center;letter-spacing:1px">NESSUN CODICE NECESSARIO — APPLICATO AUTOMATICAMENTE</div>
+ </div>
+ <a href="https://bzstarz1.com/b825dki4d" style="display:block;text-align:center;background:var(--accent);color:#000;font-weight:800;padding:10px;border-radius:6px;margin-top:10px;text-decoration:none;font-size:14px">Richiedi Ora →</a>
+ </div>
+ <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:left">
+ <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">🎰 Bovada</div>
+ <div style="font-size:14px;color:var(--accent2);font-weight:700;margin-bottom:12px">$3,000 Bonus di Benvenuto Casinò</div>
+ <div style="display:flex;gap:8px;align-items:center">
+ <div onclick="navigator.clipboard.writeText('NEWWELCOME');this.textContent='✅ Copiato!';setTimeout(()=>this.textContent='NEWWELCOME',2000)" style="flex:1;background:rgba(16,185,129,0.1);border:1px dashed var(--accent2);border-radius:6px;padding:10px 14px;font-family:monospace;font-size:16px;font-weight:700;color:var(--accent2);cursor:pointer;text-align:center;letter-spacing:2px">NEWWELCOME</div>
+ </div>
+ <a href="/it/casinos/bovada-review.html" style="display:block;text-align:center;background:var(--surface2);color:var(--text);font-weight:700;padding:10px;border-radius:6px;margin-top:10px;text-decoration:none;font-size:14px;border:1px solid var(--border)">Recensione Completa →</a>
+ </div>
+ <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:left">
+ <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">🎰 DraftKings Casino</div>
+ <div style="font-size:14px;color:var(--accent2);font-weight:700;margin-bottom:12px">$50 Gioco Gratuito + Scommesse Bonus</div>
+ <div style="display:flex;gap:8px;align-items:center">
+ <div onclick="navigator.clipboard.writeText('Nessun codice necessario');this.textContent='✅ Copiato!';setTimeout(()=>this.textContent='APPLICATO AUTOMATICAMENTE ALLA REGISTRAZIONE',2000)" style="flex:1;background:rgba(16,185,129,0.1);border:1px dashed var(--accent2);border-radius:6px;padding:10px 14px;font-family:monospace;font-size:14px;font-weight:700;color:var(--accent2);cursor:pointer;text-align:center;letter-spacing:1px">APPLICATO AUTOMATICAMENTE ALLA REGISTRAZIONE</div>
+ </div>
+ <a href="/it/casinos/draftkings-casino-review.html" style="display:block;text-align:center;background:var(--surface2);color:var(--text);font-weight:700;padding:10px;border-radius:6px;margin-top:10px;text-decoration:none;font-size:14px;border:1px solid var(--border)">Recensione Completa →</a>
+ </div>
+ </div>
+ <p style="color:var(--muted);font-size:12px;margin-top:16px">💡 Suggerimento: I codici bonus cambiano frequentemente. Aggiungi questa pagina ai segnalibri per aggiornamenti quotidiani.</p>
+ </div>
+</div>
+<div class="container">
+ <div class="legal-notice">
+ <strong>Divulgazione Affiliati:</strong> Potremmo guadagnare una commissione se ti registri tramite i nostri link senza alcun costo aggiuntivo per te. Tutte le recensioni sono editorialmente indipendenti. Devi avere l'età legale per giocare nella tua giurisdizione. Gioca responsabilmente.
+ </div>
+ <div class="layout">
+ <div class="main">
+ <div class="section">
+ <div class="section-header">
+ <h2 class="section-title">🎰 I Migliori Casinò Online 2026</h2>
+ <a href="/it/casinos/index.html" class="see-all">Vedi tutti →</a>
+ </div>
+ <div id="global" class="operator-list">
+ <div class="operator-card">
+ <div class="op-rank rank-1">#1</div>
+ <div>
+ <div class="op-name">BitStarz <span style="font-size:11px;color:#fbbf24;font-weight:700">🏆 SCELTA DELL'EDITORE</span></div>
+ <div class="op-meta">Casinò crypto premiato · Licenza Curacao · 3.500+ giochi · Prelievi istantanei</div>
+ <div class="op-bonus">5 BTC + 180 Giri Gratuiti Bonus di Benvenuto</div>
+ <div class="op-tags">
+ <span class="op-tag">🏆 Scelta dell'Editore</span>
+ <span class="op-tag">Crypto</span>
+ <span class="op-tag">Pagamento Istantaneo</span>
+ <span class="op-tag">3500+ Giochi</span>
+ </div>
+ <div style="margin-top:10px"><a href="https://bzstarz1.com/b825dki4d" class="cta-btn" style="max-width:150px">Richiedi Bonus →</a></div>
+ </div>
+ <div class="op-ra
