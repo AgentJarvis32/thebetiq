@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script>
+(function() {
+  var langMap = {
+    'es': '/es/', 'ca': '/es/', 'gl': '/es/',
+    'pt': '/pt/', 'pt-br': '/pt/', 'pt-pt': '/pt/',
+    'fr': '/fr/', 'fr-be': '/fr/', 'fr-ca': '/fr/',
+    'de': '/de/', 'de-at': '/de/', 'de-ch': '/de/',
+    'it': '/it/',
+    'ja': '/ja/',
+    'ko': '/ko/',
+    'zh': '/zh/', 'zh-cn': '/zh/', 'zh-tw': '/zh/', 'zh-sg': '/zh/',
+    'hi': '/hi/',
+    'tr': '/tr/'
+  };
+  if (!localStorage.getItem('betiq-lang-chosen')) {
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var prefix = lang.split('-')[0];
+    var target = langMap[lang] || langMap[prefix];
+    if (target && !window.location.pathname.startsWith(target)) {
+      localStorage.setItem('betiq-lang-chosen', '1');
+      window.location.href = target;
+    }
+  }
+})();
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0T46BJ6WM"></script>
 <script>
@@ -18,6 +45,18 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://thebetiq.com/sportsbooks/betonline-review.html">
 <link rel="stylesheet" href="../css/style.css">
+  <link rel="alternate" hreflang="en" href="https://thebetiq.com/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thebetiq.com/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="es" href="https://thebetiq.com/es/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="pt" href="https://thebetiq.com/pt/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="fr" href="https://thebetiq.com/fr/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="de" href="https://thebetiq.com/de/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="it" href="https://thebetiq.com/it/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="ja" href="https://thebetiq.com/ja/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="ko" href="https://thebetiq.com/ko/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="zh" href="https://thebetiq.com/zh/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="hi" href="https://thebetiq.com/hi/sportsbooks/betonline-review.html" />
+  <link rel="alternate" hreflang="tr" href="https://thebetiq.com/tr/sportsbooks/betonline-review.html" />
 </head>
 <body>
 <nav><div class="nav-inner">
@@ -156,4 +195,35 @@
 © 2026 TheBetIQ · Must be 21+. Gambling problem? 1-800-GAMBLER.
 </div></div></footer>
 <script src="../js/main.js"></script>
+
+<div id="lang-switcher" style="position:fixed;top:10px;right:15px;z-index:9999;">
+  <select onchange="(function(v){localStorage.setItem('betiq-lang-chosen','1');window.location.href=v;})(this.value)"
+    style="background:#1a1a2e;color:#fff;border:1px solid #4a4a8a;border-radius:6px;padding:6px 10px;font-size:13px;cursor:pointer;">
+    <option value="/">🇺🇸 English</option>
+    <option value="/es/">🇪🇸 Español</option>
+    <option value="/pt/">🇧🇷 Português</option>
+    <option value="/fr/">🇫🇷 Français</option>
+    <option value="/de/">🇩🇪 Deutsch</option>
+    <option value="/it/">🇮🇹 Italiano</option>
+    <option value="/ja/">🇯🇵 日本語</option>
+    <option value="/ko/">🇰🇷 한국어</option>
+    <option value="/zh/">🇨🇳 中文</option>
+    <option value="/hi/">🇮🇳 हिन्दी</option>
+    <option value="/tr/">🇹🇷 Türkçe</option>
+  </select>
+</div>
+<script>
+(function(){
+  var path = window.location.pathname;
+  var sel = document.getElementById('lang-switcher').querySelector('select');
+  var langs = ['es','pt','fr','de','it','ja','ko','zh','hi','tr'];
+  for(var i=0;i<langs.length;i++){
+    if(path.startsWith('/'+langs[i]+'/')){
+      sel.value='/'+langs[i]+'/';
+      break;
+    }
+  }
+})();
+</script>
+
 </body></html>
