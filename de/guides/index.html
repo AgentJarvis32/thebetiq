@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<script>
+(function() {
+  var langMap = {
+    'es': '/es/', 'ca': '/es/', 'gl': '/es/',
+    'pt': '/pt/', 'pt-br': '/pt/', 'pt-pt': '/pt/',
+    'fr': '/fr/', 'fr-be': '/fr/', 'fr-ca': '/fr/',
+    'de': '/de/', 'de-at': '/de/', 'de-ch': '/de/',
+    'it': '/it/',
+    'ja': '/ja/',
+    'ko': '/ko/',
+    'zh': '/zh/', 'zh-cn': '/zh/', 'zh-tw': '/zh/', 'zh-sg': '/zh/',
+    'hi': '/hi/',
+    'tr': '/tr/'
+  };
+  if (!localStorage.getItem('betiq-lang-chosen')) {
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var prefix = lang.split('-')[0];
+    var target = langMap[lang] || langMap[prefix];
+    if (target && !window.location.pathname.startsWith(target)) {
+      localStorage.setItem('betiq-lang-chosen', '1');
+      window.location.href = target;
+    }
+  }
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0T46BJ6WM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R0T46BJ6WM');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wettanleitungen & Strategien 2026 — Lernen, wie man wettet | TheBetIQ</title>
+    <meta name="description" content="Kostenlose Wettanleitungen zu Quoten, Strategien, Bankroll-Management und mehr. Lernen Sie, wie Sie intelligenter wetten mit TheBetIQ.">
+    <meta property="og:title" content="Wettanleitungen & Strategien 2026 — Lernen, wie man wettet | TheBetIQ">
+    <meta property="og:description" content="Kostenlose Wettanleitungen zu Quoten, Strategien, Bankroll-Management und mehr. Lernen Sie, wie Sie intelligenter wetten mit TheBetIQ.">
+    <meta property="og:url" content="https://thebetiq.com/guides/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://thebetiq.com/guides/">
+<meta name="description" content="Vollständige Wettanleitungen und Strategien. Sportwettenquoten, Blackjack-Strategie, Bankroll-Management und mehr.">
+<link rel="stylesheet" href="../css/style.css">
+  <link rel="alternate" hreflang="en" href="https://thebetiq.com/guides/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thebetiq.com/guides/index.html" />
+  <link rel="alternate" hreflang="es" href="https://thebetiq.com/es/guides/index.html" />
+  <link rel="alternate" hreflang="pt" href="https://thebetiq.com/pt/guides/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://thebetiq.com/fr/guides/index.html" />
+  <link rel="alternate" hreflang="de" href="https://thebetiq.com/de/guides/index.html" />
+  <link rel="alternate" hreflang="it" href="https://thebetiq.com/it/guides/index.html" />
+  <link rel="alternate" hreflang="ja" href="https://thebetiq.com/ja/guides/index.html" />
+  <link rel="alternate" hreflang="ko" href="https://thebetiq.com/ko/guides/index.html" />
+  <link rel="alternate" hreflang="zh" href="https://thebetiq.com/zh/guides/index.html" />
+  <link rel="alternate" hreflang="hi" href="https://thebetiq.com/hi/guides/index.html" />
+  <link rel="alternate" hreflang="tr" href="https://thebetiq.com/tr/guides/index.html" />
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">The<span>BetIQ</span></a>
+    <ul class="nav-links">
+    <li><a href="../index.html">Startseite</a></li>
+    <li><a href="../de/casinos/index.html">Online Casinos</a></li>
+    <li><a href="../de/casinos/crypto-casinos.html">Krypto Casinos</a></li>
+    <li><a href="../de/countries/index.html">Länder</a></li>
+    <li><a href="../de/states/index.html">US-Bundesstaaten</a></li>
+    <li><a href="../de/guides/index.html">Anleitungen</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../de/guides/best-online-casino-bonuses.html">Bonusse <span class="nav-badge">HEISS</span></a></li>
+  </ul>
+  </div>
+</nav>
+<div class="hero" style="padding:40px 20px">
+  <h1 style="font-size:clamp(22px,4vw,36px)"><span>Wettanleitungen</span> & Strategien</h1>
+  <p>Alles, was Sie brauchen, um intelligenter zu wetten — Quoten, Strategien, Boni und Bankroll-Management.</p>
+</div>
+<div class="container">
+  <div class="guide-grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
+    <div class="guide-card">
+      <div class="guide-icon">📊</div>
+      <div class="guide-title">Erläuterung der Sportwettenquoten</div>
+      <div class="guide-desc">Amerikanische, dezimale und fractionale Quoten. Der Vig. Implizierte Wahrscheinlichkeit. Quotenvergleich. Unverzichtbare Lektüre für jeden Wetter.</div>
+      <a href="sports-betting-odds.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">⚖️</div>
+      <div class="guide-title">Ist Online-Glücksspiel in den USA legal?</div>
+      <div class="guide-desc">Bundesgesetze, Aufhebung von PASPA, Status von Bundesstaat zu Bundesstaat und was der Offshore-Graubereich tatsächlich für Sie bedeutet.</div>
+      <a href="legal-guide.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎁</div>
+      <div class="guide-title">Keine Einzahlung Casino Boni 2026</div>
+      <div class="guide-desc">Kostenloses Geld ohne Einzahlung. Jedes aktuelle Angebot in den USA — wie man es beansprucht, was die Bedingungen bedeuten und welche es wert sind.</div>
+      <a href="no-deposit-bonus.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🃏</div>
+      <div class="guide-title">Blackjack Grundstrategie</div>
+      <div class="guide-desc">Das vollständige Strategie-Diagramm — jede Hand gegen jede Dealer-Karte. Reduziert den Hausvorteil auf unter 0,5 %. Drucken Sie es aus.</div>
+      <a href="blackjack-strategy.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">💵</div>
+      <div class="guide-title">Leitfaden zum Bankroll-Management</div>
+      <div class="guide-desc">Einheitengröße, Sitzungsgrenzen, das Kelly-Kriterium. Die wichtigste Fähigkeit im Glücksspiel — wichtiger als Tipps oder Strategien.</div>
+      <a href="bankroll-management.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎰</div>
+      <div class="guide-title">Leitfaden zum Parlay-Wetten</div>
+      <div class="guide-desc">Wie Parlay-Wetten funktionieren, die echte Mathematik hinter den Auszahlungen und wann ein Parlay (und wann nicht) es wert ist, gewettet zu werden.</div>
+      <a href="parlay-guide.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎁</div>
+      <div class="guide-title">Beste Online Casino Boni</div>
+      <div class="guide-desc">Leitfaden zu Casino-Bonustypen (Willkommensbonus, Reload-Bonus, No-Deposit-Bonus, Freispiele). Wie man die Umsatzanforderungen liest. Die besten Boni von 2026.</div>
+      <a href="best-online-casino-bonuses.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎰</div>
+      <div class="guide-title">Leitfaden zu Online-Slots</div>
+      <div class="guide-desc">Wie Online-Slots funktionieren (RTP, Volatilität, Gewinnlinien). Die besten Slots zum Spielen. Unterschied zwischen klassischen/video/progressiven Slots.</div>
+      <a href="online-slots-guide.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎥</div>
+      <div class="guide-title">Leitfaden zum Live-Dealer-Casino</div>
+      <div class="guide-desc">Was ist ein Live-Dealer-Casino? Wie es funktioniert. Die besten Live-Dealer-Spiele (Blackjack, Roulette, Baccarat). Welche Seiten das beste Live-Casino haben.</div>
+      <a href="live-dealer-casino-guide.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">🎡</div>
+      <div class="guide-title">Leitfaden zu Online-Roulette</div>
+      <div class="guide-desc">Amerikanisches vs. europäisches vs. französisches Roulette. Wettstrategien. Hausvorteil erklärt. Die besten Roulette-Seiten.</div>
+      <a href="online-roulette-guide.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+    <div class="guide-card">
+      <div class="guide-icon">⚖️</div>
+      <div class="guide-title">Casino vs. Sportwetten</div>
+      <div class="guide-desc">Vergleichsleitfaden. Was für verschiedene Spielertypen besser ist. Erwartungswert, Hausvorteil vs. Juice erklärt.</div>
+      <a href="casino-vs-sportsbook.html" class="guide-link">Leitfaden lesen →</a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      © 2026 TheBetIQ · Muss mindestens 21 Jahre alt sein. Glücksspielprobleme? Rufen Sie 1-800-GAMBLER an.
+    </div>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+
+<div id="lang-switcher" style="position:fixed;top:10px;right:15px;z-index:9999;">
+  <select onchange="(function(v){localStorage.setItem('betiq-lang-chosen','1');window.location.href=v;})(this.value)"
+    style="background:#1a1a2e;color:#fff;border:1px solid #4a4a8a;border-radius:6px;padding:6px 10px;font-size:13px;cursor:pointer;">
+    <option value="/">🇺🇸 Englisch</option>
+    <option value="/es/">🇪🇸 Español</option>
+    <option value="/pt/">🇧🇷 Português</option>
+    <option value="/fr/">🇫🇷 Français</option>
+    <option value="/de/">🇩🇪 Deutsch</option>
+    <option value="/it/">🇮🇹 Italiano</option>
+    <option value="/ja/">🇯🇵 日本語</option>
+    <option value="/ko/">🇰🇷 한국어</option>
+    <option value="/zh/">🇨🇳 中文</option>
+    <option value="/hi/">🇮🇳 हिन्दी</option>
+    <option value="/tr/">🇹🇷 Türkçe</option>
+  </select>
+</div>
+<script>
+(function(){
+  var path = window.location.pathname;
+  var sel = document.getElementById('lang-switcher').querySelector('select');
+  var langs = ['es','pt','fr','de','it','ja','ko','zh','hi','tr'];
+  for(var i=0;i<langs.length;i++){
+    if(path.startsWith('/'+langs[i]+'/')){
+      sel.value='/'+langs[i]+'/';
+      break;
+    }
+  }
+})();
+</script>
+
+<div id="biq-ls" style="position:fixed;top:8px;right:12px;z-index:99999">
+<select onchange="localStorage.setItem('betiq-lang','1');window.location.href=this.value"
+  style="background:#1a1a2e;color:#e0e0ff;border:1px solid #5555aa;border-radius:5px;padding:5px 8px;font-size:12px;cursor:pointer">
+<option value="/">🇺🇸 English</option>
+<option value="/es/">🇪🇸 Español</option>
+<option value="/pt/">🇧🇷 Português</option>
+<option value="/fr/">🇫🇷 Français</option>
+<option value="/de/" selected>🇩🇪 Deutsch</option>
+<option value="/it/">🇮🇹 Italiano</option>
+<option value="/ja/">🇯🇵 日本語</option>
+<option value="/ko/">🇰🇷 한국어</option>
+<option value="/zh/">🇨🇳 中文</option>
+<option value="/hi/">🇮🇳 हिन्दी</option>
+<option value="/tr/">🇹🇷 Türkçe</option>
+</select></div>
+<script>(function(){
+var p=window.location.pathname,s=document.querySelector('#biq-ls select');
+['es','pt','fr','de','it','ja','ko','zh','hi','tr'].forEach(function(l){
+  if(p.startsWith('/'+l+'/')){s.value='/'+l+'/';}
+});
+})();</script>
+</body>
+</html>
