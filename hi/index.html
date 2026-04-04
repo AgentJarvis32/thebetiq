@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>
+(function() {
+  var langMap = {
+    'es': '/es/', 'ca': '/es/', 'gl': '/es/',
+    'pt': '/pt/', 'pt-br': '/pt/', 'pt-pt': '/pt/',
+    'fr': '/fr/', 'fr-be': '/fr/', 'fr-ca': '/fr/',
+    'de': '/de/', 'de-at': '/de/', 'de-ch': '/de/',
+    'it': '/it/',
+    'ja': '/ja/',
+    'ko': '/ko/',
+    'zh': '/zh/', 'zh-cn': '/zh/', 'zh-tw': '/zh/', 'zh-sg': '/zh/',
+    'hi': '/hi/',
+    'tr': '/tr/'
+  };
+  if (!localStorage.getItem('betiq-lang-chosen')) {
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var prefix = lang.split('-')[0];
+    var target = langMap[lang] || langMap[prefix];
+    if (target && !window.location.pathname.startsWith(target)) {
+      localStorage.setItem('betiq-lang-chosen', '1');
+      window.location.href = target;
+    }
+  }
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0T46BJ6WM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R0T46BJ6WM');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheBetIQ -- सर्वश्रेष्ठ ऑनलाइन कैसीनो और क्रिप्टो कैसीनो समीक्षाएँ 2026</title>
+<meta name="description" content="दुनिया भर के सर्वश्रेष्ठ ऑनलाइन कैसीनो और क्रिप्टो कैसीनो की विशेषज्ञ समीक्षाएँ। हम खेलों का परीक्षण करते हैं, भुगतान की पुष्टि करते हैं, और सबसे बड़े बोनस खोजते हैं। BitStarz, Bovada, DraftKings Casino, BetMGM और भी बहुत कुछ।">
+<meta property="og:title" content="TheBetIQ -- सर्वश्रेष्ठ ऑनलाइन कैसीनो और क्रिप्टो कैसीनो समीक्षाएँ 2026">
+<meta property="og:description" content="100+ देशों के लिए शीर्ष रेटेड ऑनलाइन कैसीनो और क्रिप्टो कैसीनो की समीक्षाएँ। खेलों का परीक्षण, भुगतान की पुष्टि, स्वतंत्र विशेषज्ञ समीक्षाएँ।">
+<meta property="og:url" content="https://thebetiq.com/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://thebetiq.com/">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.country-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
+.ctab { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:8px 16px; font-size:13px; font-weight:700; color:var(--muted); cursor:pointer; transition:all .15s; text-decoration:none; display:flex; align-items:center; gap:6px; }
+.ctab:hover, .ctab.active { background:var(--accent); color:#000; border-color:var(--accent); text-decoration:none; }
+.world-badge { background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(16,185,129,0.2)); border:1px solid rgba(245,158,11,0.3); border-radius:20px; padding:4px 12px; font-size:11px; font-weight:800; color:var(--accent); letter-spacing:.5px; }
+</style>
+  <link rel="alternate" hreflang="en" href="https://thebetiq.com/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thebetiq.com/index.html" />
+  <link rel="alternate" hreflang="es" href="https://thebetiq.com/es/index.html" />
+  <link rel="alternate" hreflang="pt" href="https://thebetiq.com/pt/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://thebetiq.com/fr/index.html" />
+  <link rel="alternate" hreflang="de" href="https://thebetiq.com/de/index.html" />
+  <link rel="alternate" hreflang="it" href="https://thebetiq.com/it/index.html" />
+  <link rel="alternate" hreflang="ja" href="https://thebetiq.com/ja/index.html" />
+  <link rel="alternate" hreflang="ko" href="https://thebetiq.com/ko/index.html" />
+  <link rel="alternate" hreflang="zh" href="https://thebetiq.com/zh/index.html" />
+  <link rel="alternate" hreflang="hi" href="https://thebetiq.com/hi/index.html" />
+  <link rel="alternate" hreflang="tr" href="https://thebetiq.com/tr/index.html" />
+</head>
+<body>
+
+
+<!-- GEO BAR -->
+<div id="geo-bar"></div>
+
+<!-- COUNTRY PICKER MODAL -->
+<div id="country-modal" onclick="if(event.target===this)hideCountryPicker()">
+  <div class="modal-inner">
+    <div class="modal-title">
+      🌍 अपना देश चुनें
+      <button class="modal-close" onclick="hideCountryPicker()">✕</button>
+    </div>
+    <div class="country-picker-grid">
+      <div class="cp-item" onclick="selectCountry('GB','United Kingdom')">🇬🇧 यूनाइटेड किंगडम</div>
+      <div class="cp-item" onclick="selectCountry('AU','Australia')">🇦🇺 ऑस्ट्रेलिया</div>
+      <div class="cp-item" onclick="selectCountry('CA','Canada')">🇨🇦 कनाडा</div>
+      <div class="cp-item" onclick="selectCountry('IN','India')">🇮🇳 भारत</div>
+      <div class="cp-item" onclick="selectCountry('US','United States')">🇺🇸 संयुक्त राज्य अमेरिका</div>
+      <div class="cp-item" onclick="selectCountry('NZ','New Zealand')">🇳🇿 न्यूज़ीलैंड</div>
+      <div class="cp-item" onclick="selectCountry('DE','Germany')">🇩🇪 जर्मनी</div>
+      <div class="cp-item" onclick="selectCountry('IE','Ireland')">🇮🇪 आयरलैंड</div>
+      <div class="cp-item" onclick="selectCountry('ZA','South Africa')">🇿🇦 दक्षिण अफ्रीका</div>
+      <div class="cp-item" onclick="selectCountry('SE','Sweden')">🇸🇪 स्वीडन</div>
+      <div class="cp-item" onclick="selectCountry('NO','Norway')">🇳🇴 नॉर्वे</div>
+      <div class="cp-item" onclick="selectCountry('BR','Brazil')">🇧🇷 ब्राज़ील</div>
+      <div class="cp-item" onclick="selectCountry('MX','Mexico')">🇲🇽 मेक्सिको</div>
+      <div class="cp-item" onclick="selectCountry('JP','Japan')">🇯🇵 जापान</div>
+      <div class="cp-item" onclick="selectCountry('SG','Singapore')">🇸🇬 सिंगापुर</div>
+      <div class="cp-item" onclick="selectCountry('PH','Philippines')">🇵🇭 फिलीपींस</div>
+      <div class="cp-item" onclick="selectCountry('KE','Kenya')">🇰🇪 केन्या</div>
+      <div class="cp-item" onclick="selectCountry('NG','Nigeria')">🇳🇬 नाइजीरिया</div>
+      <div class="cp-item" onclick="selectCountry('GH','Ghana')">🇬🇭 घाना</div>
+      <div class="cp-item" onclick="selectCountry('HK','Hong Kong')">🇭🇰 हांगकांग</div>
+    </div>
+    <p style="font-size:11px;color:var(--muted);margin-top:16px">आपका चयन स्थानीय रूप से सहेजा गया है। हम इसका उपयोग आपके क्षेत्र के लिए सबसे प्रासंगिक ऑपरेटरों और बोनस दिखाने के लिए करते हैं।</p>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">The<span>BetIQ</span></div>
+    <ul class="nav-links">
+      <li><a href="/hi/index.html">होम</a></li>
+      <li><a href="/hi/casinos/index.html">ऑनलाइन कैसीनो</a></li>
+      <li><a href="/hi/casinos/crypto-casinos.html">क्रिप्टो कैसीनो</a></li>
+      <li><a href="/hi/countries/index.html">देश</a></li>
+      <li><a href="/hi/states/index.html">यूएस राज्य</a></li>
+      <li><a href="/hi/guides/index.html">गाइड</a></li>
+      <li><a href="/hi/blog/">ब्लॉग</a></li>
+      <li><a href="/hi/bonus-codes.html">बोनस कोड <span class="nav-badge">नया</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="world-badge">🌍 विश्वव्यापी कवरेज</div>
+  <h1 style="margin-top:14px">दुनिया के सबसे विश्वसनीय<br><span>ऑनलाइन कैसीनो समीक्षाएँ</span></h1>
+  <p>दुनिया भर के सर्वश्रेष्ठ ऑनलाइन कैसीनो और क्रिप्टो कैसीनो की विशेषज्ञ समीक्षाएँ। हम खेलों का परीक्षण करते हैं, भुगतान की पुष्टि करते हैं, और सबसे बड़े बोनस खोजते हैं ताकि आपको न करना पड़े।</p>
+  <div class="hero-badges">
+    <div class="hero-badge"><span class="dot"></span>3,500+ खेलों का परीक्षण किया गया</div>
+    <div class="hero-badge"><span class="dot"></span>भुगतान की गति की पुष्टि की गई</div>
+    <div class="hero-badge"><span class="dot"></span>क्रिप्टो और फिएट</div>
+    <div class="hero-badge"><span class="dot"></span>स्वतंत्र समीक्षाएँ</div>
+  </div>
+</div>
+
+<!-- BONUS CODES BANNER -->
+<div style="background:linear-gradient(135deg,#1a1020 0%,#0f1117 50%,#0d1a0d 100%);border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);padding:40px 20px;text-align:center">
+  <div style="max-width:var(--max-width);margin:0 auto">
+    <div style="font-size:11px;font-weight:800;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">🔥 विशेष बोनस कोड — अप्रैल 2026 में अपडेट किया गया</div>
+    <h2 style="font-size:32px;font-weight:900;color:var(--text);margin:0 0 8px 0">आज के सर्वश्रेष्ठ कैसीनो बोनस कोड</h2>
+    <p style="color:var(--muted);margin:0 0 28px 0;font-size:15px">सत्यापित कोड। कॉपी करने के लिए क्लिक करें। अधिकतम मूल्य के लिए साइन अप पर उपयोग करें।</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:900px;margin:0 auto">
+
+      <!-- BitStarz -->
+      <div style="background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:20px;text-align:left;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;right:0;background:var(--accent);color:#000;font-size:10px;font-weight:800;padding:4px 12px;border-radius:0 0 0 8px">सर्वश्रेष्ठ प्रस्ताव</div>
+        <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">🎰 BitStarz</div>
+        <div style="font-size:14px;color:var(--accent);font-weight:700;margin-bottom:12px">5 BTC + 180 फ्री स्पिन</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <div onclick="navigator.clipboard.writeText('कोई कोड आवश्यक नहीं');this.textContent='✅ कॉपी किया गया!';setTimeout(()=>this.textContent='कोई कोड आवश्यक नहीं — स्वचालित रूप से लागू किया गया',2000)" style="flex:1;background:rgba(245,158,11,0.1);border:1px dashed var(--accent);border-radius:6px;padding:10px 14px;font-family:monospace;font-size:14px;font-weight:700;color:var(--accent);cursor:pointer;text-align:center;letter-spacing:1px">कोई कोड आवश्यक नहीं — स्वचालित रूप से लागू किया गया</div>
+        </div>
+        <a href="https://bzstarz1.com/b825dki4d" style="display:block;text-align:center;background:var(--accent);color:#000;font-weight:800;padding:10px;border-radius:6px;margin-top:10px;text-decoration:none;font-size:14px">अभी प्राप्त करें →</a>
+      </div>
+
+      <!-- Bovada -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:left">
+        <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">🎰 Bovada</div>
+        <div style="font-size:14px;color:var(--accent2);font-weight:700;margin-bottom:12px">$3,000 कैसीनो स्वागत बोनस</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <div onclick="navigator.clipboard.writeText('NEWWELCOME');this.textContent='✅ कॉपी किया गया!';setTimeout(()=>this.textContent='NEWWELCOME',2000)" style="flex:1;background:rgba(16,185,129,0.1);border:1px dashed var(--accent2);border-radius:6px;padding:10px 14px;font-family:monospace;font-size:16px;font-weight:700;color:var(--accent2);cursor:pointer;text-align:center;letter-spacing:2px">NEWWELCOME</div>
+        </div>
+        <a href="/hi/casinos/bovada-review.html" style="display:block;text-align:center;background:var(--surface2);color:var(--text);font-weight:700;padding:10px;border-radius:6px;margin-top:10px;text-decoration:none;font-size:14px;border:1px solid var(--border)">पूर्ण समीक्षा →</a>
+      </div>
+
+      <!-- DraftKings -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:left">
+        <div style="font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px">🎰 DraftKings Casino</div>
+        <div style="font-size:14px;color:var(--accent2);font-weight:700;margin-bottom:12px">$50 फ्री प्ले + बोनस बेट्स</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <div onclick="navigator.clipboard.writeText('कोई कोड आवश्यक नहीं');this.textContent='✅ कॉपी किया गया!';setTimeout(()=>this.textContent='साइन अप पर स्वचालित रूप से लागू किया गया',2000)" style="flex:1;background:rgba(16,185,129,0.1);border:1px dashed var(--accent2);border-radius:6px;padding:10px 14px;font-family:monospace;font-size:14px;font-weight:700;color:var(--accent2);cursor:pointer;text-align:center;letter-spacing:1px">साइन अप पर स्वचालित रूप से लागू किया गया</div>
+        </div>
+        <a href="/hi/casinos/draftkings-casino-review.html" style="display:block;text-align:center;background:var(--surface2);color:var(--text);font-weight:700;padding:10px;border-radius:6px;margin-top:10px;text-decoration:none;font-size:14px;border:1px solid var(--border)">पूर्ण समीक्षा →</a>
+      </div>
+    </div>
+  </div>
+</div><div id="biq-ls" style="position:fixed;top:8px;right:12px;z-index:99999"><select onchange="localStorage.setItem('betiq-lang-chosen','1');window.location.href=this.value" style="background:#1a1a2e;color:#e0e0ff;border:1px solid #5555aa;border-radius:5px;padding:5px 8px;font-size:12px;cursor:pointer"><option value="/">🇺🇸 English</option>
+<option value="/es/">🇪🇸 Español</option>
+<option value="/pt/">🇧🇷 Português</option>
+<option value="/fr/">🇫🇷 Français</option>
+<option value="/de/">🇩🇪 Deutsch</option>
+<option value="/it/">🇮🇹 Italiano</option>
+<option value="/ja/">🇯🇵 日本語</option>
+<option value="/ko/">🇰🇷 한국어</option>
+<option value="/zh/">🇨🇳 中文</option>
+<option value="/hi/" selected>🇮🇳 हिन्दी</option>
+<option value="/tr/">🇹🇷 Türkçe</option></select></div>
+</body>
+</html>
