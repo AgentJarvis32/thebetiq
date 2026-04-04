@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>
+(function() {
+  var langMap = {
+    'es': '/es/', 'ca': '/es/', 'gl': '/es/',
+    'pt': '/pt/', 'pt-br': '/pt/', 'pt-pt': '/pt/',
+    'fr': '/fr/', 'fr-be': '/fr/', 'fr-ca': '/fr/',
+    'de': '/de/', 'de-at': '/de/', 'de-ch': '/de/',
+    'it': '/it/',
+    'ja': '/ja/',
+    'ko': '/ko/',
+    'zh': '/zh/', 'zh-cn': '/zh/', 'zh-tw': '/zh/', 'zh-sg': '/zh/',
+    'hi': '/hi/',
+    'tr': '/tr/'
+  };
+  if (!localStorage.getItem('betiq-lang-chosen')) {
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var prefix = lang.split('-')[0];
+    var target = langMap[lang] || langMap[prefix];
+    if (target && !window.location.pathname.startsWith(target)) {
+      localStorage.setItem('betiq-lang-chosen', '1');
+      window.location.href = target;
+    }
+  }
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0T46BJ6WM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R0T46BJ6WM');
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>二十一点基本策略指南 2026 — 图表与技巧 | TheBetIQ</title>
+    <meta name="description" content="完整的二十一点基本策略指南，含图表。将赌场优势降低到0.5%。了解何时要牌、停牌、加倍和分牌。">
+    <meta property="og:title" content="二十一点基本策略指南 2026 — 图表与技巧 | TheBetIQ">
+    <meta property="og:description" content="完整的二十一点基本策略指南，含图表。将赌场优势降低到0.5%。了解何时要牌、停牌、加倍和分牌。">
+    <meta property="og:url" content="https://thebetiq.com/guides/blackjack-strategy.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://thebetiq.com/guides/blackjack-strategy.html">
+<link rel="stylesheet" href="../css/style.css">
+  <link rel="alternate" hreflang="en" href="https://thebetiq.com/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thebetiq.com/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="es" href="https://thebetiq.com/es/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="pt" href="https://thebetiq.com/pt/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="fr" href="https://thebetiq.com/fr/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="de" href="https://thebetiq.com/de/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="it" href="https://thebetiq.com/it/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="ja" href="https://thebetiq.com/ja/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="ko" href="https://thebetiq.com/ko/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="zh" href="https://thebetiq.com/zh/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="hi" href="https://thebetiq.com/hi/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="tr" href="https://thebetiq.com/tr/guides/blackjack-strategy.html" />
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="/zh/../index.html" class="nav-logo">The<span>BetIQ</span></a>
+  <ul class="nav-links">
+    <li><a href="/zh/../index.html">首页</a></li>
+    <li><a href="/zh/../casinos/index.html">在线赌场</a></li>
+    <li><a href="/zh/../casinos/crypto-casinos.html">加密赌场</a></li>
+    <li><a href="/zh/../countries/index.html">国家</a></li>
+    <li><a href="/zh/../states/index.html">美国州</a></li>
+    <li><a href="/zh/../guides/index.html">指南</a></li>
+    <li><a href="/zh/../blog/">博客</a></li>
+    <li><a href="/zh/../blog/">博客</a></li>
+      <li><a href="/zh/../blog/">博客</a></li>
+    <li><a href="/zh/../guides/best-online-casino-bonuses.html">奖金 <span class="nav-badge">热门</span></a></li>
+  </ul>
+</div></nav>
+<div class="container" style="max-width:900px">
+  <div style="font-size:12px;color:var(--muted);margin-bottom:20px"><a href="/zh/../index.html">首页</a> → <a href="/zh/index.html">指南</a> → 二十一点策略</div>
+  <div class="article-body">
+    <h1>二十一点基本策略：完整指南 (2026)</h1>
+<p><strong>最后更新：2026年3月 | 阅读时间10分钟</strong></p>
+<p>---</p>
+<p>二十一点是所有赌场游戏中赔率最好的游戏——前提是你正确地玩。使用基本策略时，标准六副牌的二十一点游戏的赌场优势降至0.5%以下。这比任何老虎机都要好，比轮盘赌也要好，并且与视频扑克相当。</p>
+<p>关键是：你必须真正学习这个策略。本指南涵盖了一切。</p>
+<p>---</p>
+<h2>什么是基本策略？</h2>
+<p>基本策略是针对二十一点中每一种可能手牌的数学最优玩法。它会根据你的牌和庄家的明牌，准确告诉你是否要牌、停牌、加倍、分牌或放弃。</p>
+<p>这个策略是在1950年代由四位美国军队工程师开发的，他们进行了数百万次手牌模拟。世界上每一家赌场都试图找到其中的漏洞，但没有成功。数学是成立的。</p>
+<p>**遵循基本策略并不保证你会赢。** 存在波动。你会有糟糕的局面。但在数千手牌中，它可以最小化损失，并最大化获利的机会。</p>
+<p>---</p>
+<h2>基本策略图表</h2>
+<p>图表乍一看可能很复杂，但经过一个小时的练习后会变得本能。</p>
+<h3>硬牌（没有A，或A算作1）</h3>
+<table>
+<tr><td>你的手牌</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>A</td></tr>
+<tr><th>8或更少</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th></tr>
+<tr><td>9</td><td>要牌</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>10</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>11</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>要牌</td></tr>
+<tr><td>12</td><td>要牌</td><td>要牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>13</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>14</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>15</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>16</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>17+</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td></tr>
+</table>
+<p><strong>要牌 = H | 停牌 = S | 加倍 = D (如果不允许则要牌)</strong></p>
+<h3>软牌（A算作11）</h3>
+<table>
+<tr><td>你的手牌</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>A</td></tr>
+<tr><th>A,2</th><th>要牌</th><th>要牌</th><th>要牌</th><th>加倍</th><th>加倍</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th></tr>
+<tr><td>A,3</td><td>要牌</td><td>要牌</td><td>要牌</td><td>加倍</td><td>加倍</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>A,4</td><td>要牌</td><td>要牌</td><td>加倍</td><td>加倍</td><td>加倍</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>A,5</td><td>要牌</td><td>要牌</td><td>加倍</td><td>加倍</td><td>加倍</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>A,6</td><td>要牌</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>A,7</td><td>停牌</td><td>加倍停牌</td><td>加倍停牌</td><td>加倍停牌</td><td>加倍停牌</td><td>停牌</td><td>停牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>A,8</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>加倍停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td></tr>
+<tr><td>A,9</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td></tr>
+</table>
+<p><strong>加倍停牌 = 如果允许则加倍，否则停牌</strong></p>
+<h3>对子（分牌）</h3>
+<table>
+<tr><td>你的对子</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>A</td></tr>
+<tr><th>2,2</th><th>分牌</th><th>分牌</th><th>分牌</th><th>分牌</th><th>分牌</th><th>分牌</th><th>要牌</th><th>要牌</th><th>要牌</th><th>要牌</th></tr>
+<tr><td>3,3</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>4,4</td><td>要牌</td><td>要牌</td><td>要牌</td><td>分牌</td><td>分牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>5,5</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>加倍</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>6,6</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>7,7</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>要牌</td><td>要牌</td><td>要牌</td><td>要牌</td></tr>
+<tr><td>8,8</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><th>分牌</th><th>分牌</th><th>分牌</th><th>分牌</th><th>分牌</th></tr>
+<tr><td>9,9</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>停牌</td><td>分牌</td><td>分牌</td><td>停牌</td><td>停牌</td></tr>
+<tr><td>10,10</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td><td>停牌</td></tr>
+<tr><td>A,A</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td><td>分牌</td></tr>
+</table>
+<p><strong>分牌 = SP</strong></p>
+<p>---</p>
+<h2>最常见的错误</h2>
+<p><strong>1. 在庄家为7或更高时停牌16</strong></p>
+<p>这是在二十一点中最让人痛苦的玩法——在害怕爆牌时对16要牌。但基本策略很明确：要牌。庄家展示7到A的牌大约75%的情况下会形成手牌。如果你停牌，你的16赢的机会不到25%。拿牌。</p>
+<p><strong>2. 不在庄家为10时加倍11</strong></p>
+<p>玩家会因为庄家显示10而感到害怕。但在11时，你有最高的概率拿到21。每次都加倍。</p>
+<p><strong>3. 买保险</strong></p>
+<p>保险是赌场中最糟糕的下注之一。保险的赌场优势超过7%。永远不要买保险——即使你有二十一点（“平局”）。</p>
+<p><strong>4. 分牌十</strong></p>
+<p>两张十给你20——这是游戏中最强的手牌之一。将它们分成两手就是放弃几乎肯定的胜利。绝不要分牌十。</p>
+<p><strong>5. 总是分牌八</strong></p>
+<p>尽管感觉不对，但这是正确的。16是二十一点中最糟糕的手牌——如果要牌你会爆牌，如果停牌你会输给大多数庄家手牌。分成两张八给你两个机会形成真正的手牌。是的，即使是对庄家10——数学支持这一点。</p>
+<p>---</p>
+<h2>影响策略的游戏变体</h2>
+<p>并不是所有的二十一点游戏都是一样的。规则会显著改变赌场优势。</p>
+<p><strong>二十一点支付表：</strong></p>
+<li><div id="biq-ls" style="position:fixed;top:8px;right:12px;z-index:99999"><select onchange="localStorage.setItem('betiq-lang-chosen','1');window.location.href=this.value" style="background:#1a1a2e;color:#e0e0ff;border:1px solid #5555aa;border-radius:5px;padding:5px 8px;font-size:12px;cursor:pointer"><option value="/">🇺🇸 English</option>
+<option value="/es/">🇪🇸 Español</option>
+<option value="/pt/">🇧🇷 Português</option>
+<option value="/fr/">🇫🇷 Français</option>
+<option value="/de/">🇩🇪 Deutsch</option>
+<option value="/it/">🇮🇹 Italiano</option>
+<option value="/ja/">🇯🇵 日本語</option>
+<option value="/ko/">🇰🇷 한국어</option>
+<option value="/zh/" selected>🇨🇳 中文</option>
+<option value="/hi/">🇮🇳 हिन्दी</option>
+<option value="/tr/">🇹🇷 Türkçe</option></select></div>
+</body></html>
