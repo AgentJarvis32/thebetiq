@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>
+(function() {
+  var langMap = {
+    'es': '/es/', 'ca': '/es/', 'gl': '/es/',
+    'pt': '/pt/', 'pt-br': '/pt/', 'pt-pt': '/pt/',
+    'fr': '/fr/', 'fr-be': '/fr/', 'fr-ca': '/fr/',
+    'de': '/de/', 'de-at': '/de/', 'de-ch': '/de/',
+    'it': '/it/',
+    'ja': '/ja/',
+    'ko': '/ko/',
+    'zh': '/zh/', 'zh-cn': '/zh/', 'zh-tw': '/zh/', 'zh-sg': '/zh/',
+    'hi': '/hi/',
+    'tr': '/tr/'
+  };
+  if (!localStorage.getItem('betiq-lang-chosen')) {
+    var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var prefix = lang.split('-')[0];
+    var target = langMap[lang] || langMap[prefix];
+    if (target && !window.location.pathname.startsWith(target)) {
+      localStorage.setItem('betiq-lang-chosen', '1');
+      window.location.href = target;
+    }
+  }
+})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0T46BJ6WM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R0T46BJ6WM');
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackjack Basic Strategy Guide 2026 — Charts & Tips | TheBetIQ</title>
+    <meta name="description" content="Complete blackjack basic strategy guide with charts. Reduce the house edge to 0.5%. Learn when to hit, stand, double, and split.">
+    <meta property="og:title" content="Blackjack Basic Strategy Guide 2026 — Charts & Tips | TheBetIQ">
+    <meta property="og:description" content="Complete blackjack basic strategy guide with charts. Reduce the house edge to 0.5%. Learn when to hit, stand, double, and split.">
+    <meta property="og:url" content="https://thebetiq.com/guides/blackjack-strategy.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://thebetiq.com/guides/blackjack-strategy.html">
+<link rel="stylesheet" href="/css/style.css">
+  <link rel="alternate" hreflang="en" href="https://thebetiq.com/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thebetiq.com/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="es" href="https://thebetiq.com/es/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="pt" href="https://thebetiq.com/pt/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="fr" href="https://thebetiq.com/fr/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="de" href="https://thebetiq.com/de/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="it" href="https://thebetiq.com/it/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="ja" href="https://thebetiq.com/ja/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="ko" href="https://thebetiq.com/ko/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="zh" href="https://thebetiq.com/zh/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="hi" href="https://thebetiq.com/hi/guides/blackjack-strategy.html" />
+  <link rel="alternate" hreflang="tr" href="https://thebetiq.com/tr/guides/blackjack-strategy.html" />
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="../index.html" class="nav-logo">The<span>BetIQ</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../casinos/index.html">Online Casinos</a></li>
+    <li><a href="../casinos/crypto-casinos.html">Crypto Casinos</a></li>
+    <li><a href="../countries/index.html">Countries</a></li>
+    <li><a href="../states/index.html">US States</a></li>
+    <li><a href="../guides/index.html">Guides</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../blog/">Blog</a></li>
+      <li><a href="../blog/">Blog</a></li>
+    <li><a href="../guides/best-online-casino-bonuses.html">Bonuses <span class="nav-badge">HOT</span></a></li>
+  </ul>
+</div></nav>
+<div class="container" style="max-width:900px">
+  <div style="font-size:12px;color:var(--muted);margin-bottom:20px"><a href="../index.html">Home</a> → <a href="index.html">Guides</a> → Blackjack Strategy</div>
+  <div class="article-body">
+    <h1>Blackjack Basic Strategy: The Complete Guide (2026)</h1>
+<p><strong>Last Updated: March 2026 | 10 min read</strong></p>
+<p>---</p>
+<p>Blackjack has the best odds of any casino game — when you play correctly. The house edge on a standard 6-deck blackjack game drops below 0.5% when using basic strategy. That's better than any slot, better than roulette, and competitive with video poker.</p>
+<p>The catch: you have to actually learn the strategy. This guide covers everything.</p>
+<p>---</p>
+<h2>What Is Basic Strategy?</h2>
+<p>Basic strategy is the mathematically optimal play for every possible hand in blackjack. It tells you exactly whether to hit, stand, double down, split, or surrender based on your cards and the dealer's upcard.</p>
+<p>It was developed in the 1950s by four US Army engineers who ran millions of hand simulations. Every casino in the world has tried to find flaws in it. They haven't. The math holds up.</p>
+<p>**Following basic strategy doesn't guarantee you'll win.** Variance exists. You'll have bad sessions. But over thousands of hands, it minimizes losses and maximizes your chance of profiting.</p>
+<p>---</p>
+<h2>The Basic Strategy Chart</h2>
+<p>The chart looks complex at first. It becomes instinctive after an hour of practice.</p>
+<h3>Hard Hands (No Ace, or Ace Counted as 1)</h3>
+<table>
+<tr><td>Your Hand</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>A</td></tr>
+<tr><th>8 or less</th><th>H</th><th>H</th><th>H</th><th>H</th><th>H</th><th>H</th><th>H</th><th>H</th><th>H</th><th>H</th></tr>
+<tr><td>9</td><td>H</td><td>D</td><td>D</td><td>D</td><td>D</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>10</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>H</td><td>H</td></tr>
+<tr><td>11</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>H</td></tr>
+<tr><td>12</td><td>H</td><td>H</td><td>S</td><td>S</td><td>S</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>13</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>14</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>15</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>16</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>17+</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td></tr>
+</table>
+<p><strong>H = Hit | S = Stand | D = Double Down (hit if not allowed)</strong></p>
+<h3>Soft Hands (Ace Counted as 11)</h3>
+<table>
+<tr><td>Your Hand</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>A</td></tr>
+<tr><th>A,2</th><th>H</th><th>H</th><th>H</th><th>D</th><th>D</th><th>H</th><th>H</th><th>H</th><th>H</th><th>H</th></tr>
+<tr><td>A,3</td><td>H</td><td>H</td><td>H</td><td>D</td><td>D</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>A,4</td><td>H</td><td>H</td><td>D</td><td>D</td><td>D</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>A,5</td><td>H</td><td>H</td><td>D</td><td>D</td><td>D</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>A,6</td><td>H</td><td>D</td><td>D</td><td>D</td><td>D</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>A,7</td><td>S</td><td>DS</td><td>DS</td><td>DS</td><td>DS</td><td>S</td><td>S</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>A,8</td><td>S</td><td>S</td><td>S</td><td>S</td><td>DS</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td></tr>
+<tr><td>A,9</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td></tr>
+</table>
+<p><strong>DS = Double Down if allowed, otherwise Stand</strong></p>
+<h3>Pairs (Splitting)</h3>
+<table>
+<tr><td>Your Pair</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>A</td></tr>
+<tr><th>2,2</th><th>SP</th><th>SP</th><th>SP</th><th>SP</th><th>SP</th><th>SP</th><th>H</th><th>H</th><th>H</th><th>H</th></tr>
+<tr><td>3,3</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>4,4</td><td>H</td><td>H</td><td>H</td><td>SP</td><td>SP</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>5,5</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>D</td><td>H</td><td>H</td></tr>
+<tr><td>6,6</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>7,7</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>H</td><td>H</td><td>H</td><td>H</td></tr>
+<tr><td>8,8</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td></tr>
+<tr><td>9,9</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>S</td><td>SP</td><td>SP</td><td>S</td><td>S</td></tr>
+<tr><td>10,10</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td><td>S</td></tr>
+<tr><td>A,A</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td><td>SP</td></tr>
+</table>
+<p><strong>SP = Split</strong></p>
+<p>---</p>
+<h2>The Most Common Mistakes</h2>
+<p><strong>1. Standing on 16 vs. dealer 7 or higher</strong></p>
+<p>This is the most emotionally painful play in blackjack — hitting a 16 when you're scared to bust. But basic strategy is clear: hit. The dealer showing a 7-Ace will make a hand roughly 75% of the time. Your 16 wins less than 25% of hands if you stand. Take the card.</p>
+<p><strong>2. Not doubling 11 vs. dealer 10</strong></p>
+<p>Players get scared of the dealer showing a 10. But with an 11, you have the highest probability of hitting 21 of any starting hand. Double. Every time.</p>
+<p><strong>3. Taking insurance</strong></p>
+<p>Insurance is one of the worst bets in the casino. The house edge on insurance is over 7%. Never take it — even when you have a blackjack ("even money").</p>
+<p><strong>4. Splitting tens</strong></p>
+<p>Two tens give you 20 — one of the strongest hands in the game. Splitting them into two separate hands is giving up a near-certain win. Never split tens.</p>
+<p><strong>5. Always splitting eights</strong></p>
+<p>This one's correct even though it feels wrong. 16 is the worst hand in blackjack — you'll bust if you hit, and you'll lose to most dealer hands if you stand. Splitting into two eights gives you two chances to make a real hand. Yes, even vs. dealer 10 — the math supports it.</p>
+<p>---</p>
+<h2>Game Variations That Affect Strategy</h2>
+<p>Not all blackjack games are equal. The rules change the house edge significantly.</p>
+<p><strong>Blackjack pay table:</strong></p>
+<li>3:2 payout on blackjack: Standard and correct</li>
+<li>6:5 payout on blackjack: Adds 1.4% to the house edge — avoid these tables</li>
+<p><strong>Number of decks:</strong></p>
+<li>Single deck: House edge ~0.15% with perfect strategy</li>
+<li>Double deck: ~0.35%</li>
+<li>6 deck (most common): ~0.50%</li>
+<li>8 deck: ~0.60%</li>
+<p><strong>Dealer hits or stands on soft 17:</strong></p>
+<li>Dealer stands on soft 17 (S17): Better for player, ~0.2% less house edge</li>
+<li>Dealer hits soft 17 (H17): Slightly worse for player — adjust strategy slightly (double A8 vs 6)</li>
+<p><strong>Surrender:</strong></p>
+<p>If surrender is available, use it on hard 15 or 16 vs. dealer 9, 10, or Ace. Surrendering returns half your bet — it's better than almost certain loss.</p>
+<p><strong>Re-splitting aces:</strong></p>
+<p>If allowed, always re-split aces (split again if you draw an ace to a split ace).</p>
+<p>---</p>
+<h2>Online Blackjack vs. Live Casino</h2>
+<p>Online blackjack has some differences worth knowing:</p>
+<p><strong>RNG (Random Number Generator) games:</strong></p>
+<p>Cards are dealt by software. Each hand is completely independent. No counting possible (cards reshuffled every hand). The RTP is set by the game's programming and mirrors the mathematical house edge — usually 99.5% or better on basic strategy games.</p>
+<p><strong>Live dealer blackjack:</strong></p>
+<p>Real cards, real dealers, filmed in a studio and streamed to your device. Multiple simultaneous players at the same table. Card counting is theoretically possible but the shoe is shuffled frequently. Better experience, same mathematical outcomes.</p>
+<p><strong>Best online blackjack games to look for:</strong></p>
+<li>Classic Blackjack (Microgaming): 99.59% RTP</li>
+<li>Blackjack Pro (NetEnt): 99.60% RTP</li>
+<li>Any game specifying 3:2 blackjack pay and S17 rules</li>
+<p>---</p>
+<h2>Card Counting: Does It Work Online?</h2>
+<p>**In physical casinos:** Yes, card counting works and is legal (not illegal, just unwelcome). The Hi-Lo system assigns values (+1 for 2-6, 0 for 7-9, -1 for 10-Ace) and gives you information about deck composition. A high positive count favors the player.</p>
+<p>**Online:** Not practically possible on RNG games (cards reshuffled every hand). On live dealer games, the shoe is typically 6-8 decks with penetration of 50-60% — possible in theory but the edge is small and casinos will back you off if they suspect counting.</p>
+<p>**For most players:** Don't worry about counting. Perfect basic strategy gets you to 99.5% RTP. Counting might get you to 100.5% on good games with perfect technique — a 1% difference not worth the mental overhead for recreational players.</p>
+<p>---</p>
+<h2>Bankroll Management for Blackjack</h2>
+<p>Blackjack has relatively low variance compared to slots but you still need proper bankroll management.</p>
+<p><strong>Recommended bankroll by stake:</strong></p>
+<table>
+<tr><td>Table Minimum</td><td>Recommended Session Bankroll</td><td>Recommended Total Bankroll</td></tr>
+<tr><th>$5</th><th>$100-$150</th><th>$500+</th></tr>
+<tr><td>$10</td><td>$200-$300</td><td>$1,000+</td></tr>
+<tr><td>$25</td><td>$500-$750</td><td>$2,500+</td></tr>
+<tr><td>$50</td><td>$1,000-$1,500</td><td>$5,000+</td></tr>
+</table>
+<p>**The rule:** 20-30 buy-ins at your stake level. This gives you enough cushion to survive variance without going broke.</p>
+<p>**Session limits:** Decide before you sit down when you'll stop — both for losses and wins. Quitting when you're up 50% of your buy-in and walking when you've lost 100% of your session bankroll is a discipline that separates recreational players from problem gamblers.</p>
+<p>---</p>
+<h2>Frequently Asked Questions</h2>
+<p><strong>Does basic strategy guarantee I'll win?</strong></p>
+<p>No — it minimizes the house edge to under 0.5%. You'll still have losing sessions. Basic strategy is about long-term expectation, not session-by-session results.</p>
+<p><strong>Should I take the insurance bet?</strong></p>
+<p>Never. The house edge on insurance is 7%+. It's the worst bet on the table.</p>
+<p><strong>Is online blackjack rigged?</strong></p>
+<p>Licensed online casinos use certified RNG software tested by independent labs. The RTP is published and audited. RNG games are fair.</p>
+<p><strong>What's the best blackjack variant?</strong></p>
+<p>Single deck with 3:2 payout and S17 rules. Very rare online. Most accessible good game: any 6-deck game with 3:2 blackjack and S17.</p>
+<p><strong>Can I use a strategy card at a casino?</strong></p>
+<p>Yes — physical casinos allow strategy cards at the table. Online, the chart is right here. No one's judging.</p>
+  </div>
+</div>
+<footer><div class="footer-inner"><div class="footer-bottom" style="border-top:none;padding-top:0">
+© 2026 TheBetIQ · Must be 21+. Gambling problem? 1-800-GAMBLER.
+</div></div></footer>
+<script src="../js/main.js"></script>
+
+<div id="lang-switcher" style="position:fixed;top:10px;right:15px;z-index:9999;">
+  <select onchange="(function(v){localStorage.setItem('betiq-lang-chosen','1');window.location.href=v;})(this.value)"
+    style="background:#1a1a2e;color:#fff;border:1px solid #4a4a8a;border-radius:6px;padding:6px 10px;font-size:13px;cursor:pointer;">
+    <option value="/">🇺🇸 English</option>
+    <option value="/es/">🇪🇸 Español</option>
+    <option value="/pt/">🇧🇷 Português</option>
+    <option value="/fr/">🇫🇷 Français</option>
+    <option value="/de/">🇩🇪 Deutsch</option>
+    <option value="/it/">🇮🇹 Italiano</option>
+    <option value="/ja/">🇯🇵 日本語</option>
+    <option value="/ko/">🇰🇷 한국어</option>
+    <option value="/zh/">🇨🇳 中文</option>
+    <option value="/hi/">🇮🇳 हिन्दी</option>
+    <option value="/tr/">🇹🇷 Türkçe</option>
+  </select>
+</div>
+<script>
+(function(){
+  var path = window.location.pathname;
+  var sel = document.getElementById('lang-switcher').querySelector('select');
+  var langs = ['es','pt','fr','de','it','ja','ko','zh','hi','tr'];
+  for(var i=0;i<langs.length;i++){
+    if(path.startsWith('/'+langs[i]+'/')){
+      sel.value='/'+langs[i]+'/';
+      break;
+    }
+  }
+})();
+</script>
+
+<div id="biq-ls" style="position:fixed;top:8px;right:12px;z-index:99999"><select onchange="localStorage.setItem('betiq-lang-chosen','1');window.location.href=this.value" style="background:#1a1a2e;color:#e0e0ff;border:1px solid #5555aa;border-radius:5px;padding:5px 8px;font-size:12px;cursor:pointer"><option value="/">🇺🇸 English</option>
+<option value="/es/" selected>🇪🇸 Español</option>
+<option value="/pt/">🇧🇷 Português</option>
+<option value="/fr/">🇫🇷 Français</option>
+<option value="/de/">🇩🇪 Deutsch</option>
+<option value="/it/">🇮🇹 Italiano</option>
+<option value="/ja/">🇯🇵 日本語</option>
+<option value="/ko/">🇰🇷 한국어</option>
+<option value="/zh/">🇨🇳 中文</option>
+<option value="/hi/">🇮🇳 हिन्दी</option>
+<option value="/tr/">🇹🇷 Türkçe</option></select></div>
+</body></html>
